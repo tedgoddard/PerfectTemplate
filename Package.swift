@@ -1,3 +1,4 @@
+// swift-tools-version:4.0
 //
 //  Package.swift
 //  PerfectTemplate
@@ -21,8 +22,11 @@ import PackageDescription
 
 let package = Package(
 	name: "PerfectTemplate",
-	targets: [],
-	dependencies: [
-		.Package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", majorVersion: 2)
-    ]
+    dependencies: [
+        .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "2.1.0"),
+    ],
+    targets: [
+        .target(name: "PerfectTemplateServer", dependencies: ["PerfectHTTP"], path: "Sources" )
+    ],
+    swiftLanguageVersions: [4]
 )
