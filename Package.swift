@@ -26,7 +26,7 @@ let package = Package(
         .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "2.1.0"),
     ],
     targets: [
-        .target(name: "PerfectTemplateServer", dependencies: ["PerfectHTTP"], path: "Sources" )
+        .target(name: "PerfectTemplateServer", dependencies: ["PerfectHTTPServer"], path: "Sources" )
     ],
     swiftLanguageVersions: [4]
 )
